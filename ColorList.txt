@@ -1,0 +1,9 @@
+BGMainTheme:
+Name/Logo: #048ddf
+
+Palette:
+- #048DDF |  rgb(4 141 223)
+- #0C1B33 | rgb(12 27 51)
+- #2C8C99 | rgb(44 140 153)
+- #A9FFF7 | rgb(169 255 247)
+- #3B3561 | rgb(59 53 97)	
