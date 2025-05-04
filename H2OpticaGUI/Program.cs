@@ -16,7 +16,7 @@ namespace H2OpticaGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new H2Optica());
+            Application.Run(new H2OpticaMain());
         }
     }
 }

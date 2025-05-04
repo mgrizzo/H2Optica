@@ -17,3 +17,28 @@ C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.csp
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaGUI\obj\Debug\H2Optica.486DBA95.Up2Date
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.exe
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaGUI.exe.config
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaGUI.exe
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaGUI.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\EntityFramework.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaLogic.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\System.Data.SQLite.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaLogic.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\H2OpticaLogic.dll.config
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\EntityFramework.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\System.Data.SQLite.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.csproj.AssemblyReference.cache
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.Properties.Resources.resources
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.csproj.GenerateResource.cache
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.csproj.CoreCompileInputs.cache
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2Optica.486DBA95.Up2Date
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.exe
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\bin\Debug\it\H2OpticaGUI.resources.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.H2OpticaMain.resources
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\H2OpticaGUI.H2OpticaMain.it.resources
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaGUI\obj\Debug\it\H2OpticaGUI.resources.dll

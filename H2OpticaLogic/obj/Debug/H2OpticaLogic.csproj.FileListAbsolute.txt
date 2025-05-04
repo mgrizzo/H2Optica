@@ -17,3 +17,19 @@ C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaLogic\obj\Debug\H2Optica.E2D0D1C0.Up2Date
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.dll
 C:\Users\matte\Documents\H2Optica\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.csproj.AssemblyReference.cache
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.csproj.CoreCompileInputs.cache
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\H2OpticaLogic.dll.config
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\H2OpticaLogic.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\H2OpticaLogic.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\EntityFramework.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Data.SQLite.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\EntityFramework.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Data.SQLite.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\obj\Debug\H2Optica.E2D0D1C0.Up2Date
