@@ -91,6 +91,37 @@ namespace H2OpticaLogic
 
             return 0;
         }
+
+        private int GetFirstAvailableSensorID(SQLiteConnection connection)
+        {
+            int? resultID = -1;
+
+            string query = @"SELECT SensorId
+                             FROM (SELECT 0 AS SensorId UNION SELECT 1 UNION SELECT 2 UNION SELECT 3 UNION SELECT 4 UNION SELECT 5)
+                             WHERE SensorId NOT IN (SELECT SensorId FROM Sensors)
+                             ORDER BY SensorId
+                             LIMIT 1;";
+
+            Logger.Log("Trying to retrieve first available sensor ID from database...");
+
+            try
+            {
+                using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                {
+                    resultID = (int?)cmd.ExecuteScalar();
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Log(ex);
+            }
+
+            if (resultID.Equals(null))
+                return (int)-1;
+
+            else return (int)resultID;
+        }
+
         public void InitializeDB()
         {
             //Controllo esistenza file DB
@@ -104,7 +135,7 @@ namespace H2OpticaLogic
 
                 //Query che crea la tabella dei sensori
                 string sensorQuery = @"CREATE TABLE IF NOT EXISTS Sensori (
-                                           SensorID INTEGER PRIMARY KEY AUTOINCREMENT,
+                                           SensorID INTEGER PRIMARY KEY,
                                            Name TEXT NOT NULL UNIQUE,
                                            Limit REAL
                                     );";
@@ -163,7 +194,7 @@ namespace H2OpticaLogic
 
                     //Controllo campi di 'Sensori'
                     string[] columns = { "SensorID", "Name", "Limit" };
-                    string[] types = { "INTEGER PRIMARY KEY AUTOINCREMENT", "TEXT NOT NULL UNIQUE", "REAL" };
+                    string[] types = { "INTEGER PRIMARY KEY", "TEXT NOT NULL UNIQUE", "REAL" };
 
                     for (int i = 0; i < columns.Length; i++)
                     {
@@ -209,16 +240,20 @@ namespace H2OpticaLogic
 
         public void InsertNewFlowSens(string name)
         {
+
             using(SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
-                string newSensQuery = @"INSERT INTO Sensori (Name)
-                                        VALUES (@name);";
+                string newSensQuery = @"INSERT INTO Sensori (SensorID,Name)
+                                        VALUES (@id,@name);";
+
+                int id = GetFirstAvailableSensorID(connection);
 
                 //Aggiungo il sensore
                 using (SQLiteCommand cmd = new SQLiteCommand(newSensQuery, connection))
                 {
+                    cmd.Parameters.AddWithValue("@id", id);
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.ExecuteNonQuery();
                 }

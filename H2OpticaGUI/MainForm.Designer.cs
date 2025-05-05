@@ -36,22 +36,22 @@
             this.sensorLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.FixedAndGraph = new System.Windows.Forms.TableLayoutPanel();
             this.FixedSensors = new System.Windows.Forms.TableLayoutPanel();
+            this.phBarContainer = new System.Windows.Forms.Panel();
+            this.phBar = new System.Windows.Forms.Panel();
             this.tempLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.phLabel = new System.Windows.Forms.Label();
             this.tempBarContainer = new System.Windows.Forms.Panel();
             this.tempBar = new System.Windows.Forms.Panel();
             this.DailyContainer = new System.Windows.Forms.Panel();
-            this.phBar = new System.Windows.Forms.Panel();
-            this.phBarContainer = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.MainLayout.SuspendLayout();
             this.FlowAndLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
             this.FixedAndGraph.SuspendLayout();
             this.FixedSensors.SuspendLayout();
+            this.phBarContainer.SuspendLayout();
             this.tempBarContainer.SuspendLayout();
             this.DailyContainer.SuspendLayout();
-            this.phBarContainer.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainLayout
@@ -106,17 +106,25 @@
             this.FixedSensors.Controls.Add(this.tempBarContainer, 1, 0);
             this.FixedSensors.Name = "FixedSensors";
             // 
+            // phBarContainer
+            // 
+            resources.ApplyResources(this.phBarContainer, "phBarContainer");
+            this.phBarContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(181)))), ((int)(((byte)(226)))));
+            this.phBarContainer.Controls.Add(this.phBar);
+            this.phBarContainer.Name = "phBarContainer";
+            // 
+            // phBar
+            // 
+            resources.ApplyResources(this.phBar, "phBar");
+            this.phBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(67)))), ((int)(((byte)(247)))));
+            this.phBar.Name = "phBar";
+            this.phBar.Resize += new System.EventHandler(this.phBar_Resize);
+            // 
             // tempLabel
             // 
             resources.ApplyResources(this.tempLabel, "tempLabel");
             this.tempLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
             this.tempLabel.Name = "tempLabel";
-            // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
-            this.label2.Name = "label2";
             // 
             // phLabel
             // 
@@ -145,18 +153,11 @@
             this.DailyContainer.Controls.Add(this.label2);
             this.DailyContainer.Name = "DailyContainer";
             // 
-            // phBar
+            // label2
             // 
-            resources.ApplyResources(this.phBar, "phBar");
-            this.phBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(67)))), ((int)(((byte)(247)))));
-            this.phBar.Name = "phBar";
-            // 
-            // phBarContainer
-            // 
-            resources.ApplyResources(this.phBarContainer, "phBarContainer");
-            this.phBarContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(181)))), ((int)(((byte)(226)))));
-            this.phBarContainer.Controls.Add(this.phBar);
-            this.phBarContainer.Name = "phBarContainer";
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
+            this.label2.Name = "label2";
             // 
             // H2OpticaMain
             // 
@@ -173,10 +174,10 @@
             this.FixedAndGraph.ResumeLayout(false);
             this.FixedSensors.ResumeLayout(false);
             this.FixedSensors.PerformLayout();
+            this.phBarContainer.ResumeLayout(false);
             this.tempBarContainer.ResumeLayout(false);
             this.DailyContainer.ResumeLayout(false);
             this.DailyContainer.PerformLayout();
-            this.phBarContainer.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

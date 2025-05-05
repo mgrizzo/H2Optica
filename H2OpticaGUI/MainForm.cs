@@ -13,9 +13,20 @@ using H2OpticaLogic;
 
 namespace H2OpticaGUI
 {
+   /*
+    * TO-DO
+    * - Code a way to set temp a pH dynamically from Arduino values
+    * - ArduinoService class (to do on proj. work time)
+    * - Handle events (buttons, other things???)
+    * - Graphs
+    * - DataGrid for sensors
+    * - Details?
+    */
+
     public partial class H2OpticaMain : Form
     {
         private const int PANEL_RADIUS = 13;
+        private const int BAR_RADIUS = 7;
 
         private DBService _dbService;
 
@@ -29,25 +40,22 @@ namespace H2OpticaGUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //Litraggio giornaliero
+            //Volume giornaliero
             PanelRoundBorder(DailyContainer, PANEL_RADIUS);
 
             //Pannello temperatura e pH
             PanelRoundBorder(FixedSensors, PANEL_RADIUS);
 
             //Temperatura
-            PanelRoundBorder(tempBarContainer, PANEL_RADIUS);
-            PanelRoundBorder(tempBar, PANEL_RADIUS);
+            PanelRoundBorder(tempBarContainer, BAR_RADIUS);
+            PanelRoundBorder(tempBar, BAR_RADIUS);
 
             //pH
-            PanelRoundBorder(phBarContainer, PANEL_RADIUS);
-            PanelRoundBorder(phBar, PANEL_RADIUS);
+            PanelRoundBorder(phBarContainer, BAR_RADIUS);
+            PanelRoundBorder(phBar, BAR_RADIUS);
 
             //Sensori
             PanelRoundBorder(sensorLayoutPanel, PANEL_RADIUS); //Pannello principale
-
-            AddSensor("Rubinetto cucina", 131.0, null);
-            AddSensor("Negro", 69, 31);
         }
 
         private void PanelRoundBorder(Panel panel, int radius)
@@ -126,6 +134,7 @@ namespace H2OpticaGUI
                 Font = new Font("Microsoft Sans Serif", 22, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.FromArgb(4, 141, 223),
+                Location = new Point(0, 0),
                 AutoSize = true
             };
 
@@ -135,7 +144,7 @@ namespace H2OpticaGUI
                 Font = new Font("Microsoft Sans Serif", 14, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
                 ForeColor = Color.FromArgb(4, 141, 223),
-                Location = new Point(51, 54),
+                Location = new Point(0, 0),
                 AutoSize = true,
             };
 
@@ -148,31 +157,26 @@ namespace H2OpticaGUI
                 AutoSize = true,
             };
 
-            /*
-             * TO-DO
-             * - Fix dynamic text placement(especially on the x axis)
-             * - Code a way to set temp a pH dynamically from Arduino values
-             * - ArduinoService class (to do on proj. work time)
-             * - Handle events (buttons, other things???)
-             * - Graphs
-             * - DataGrid for sensors
-             * - Details?
-             */
-
-            SensorName.Location = new Point((sensorPanel.Size.Width - SensorName.Size.Width) / 2, 20);
-            SensorValue.Location = new Point((sensorPanel.Size.Width - SensorValue.Size.Width) / 2, SensorName.Height + 40);
-            SensorLimit.Location = new Point((sensorPanel.Size.Width - SensorLimit.Size.Width) / 2, SensorValue.Height + 40);
-
             sensorPanel.Controls.Add(SensorName);
             sensorPanel.Controls.Add(SensorValue);
             sensorPanel.Controls.Add(SensorLimit);
 
+            SensorName.Location = new Point((sensorPanel.Size.Width - SensorName.PreferredSize.Width) / 2, 20);
+            SensorValue.Location = new Point((sensorPanel.Size.Width - SensorValue.PreferredSize.Width) / 2, SensorName.Bottom + 17);
+            SensorLimit.Location = new Point((sensorPanel.Size.Width - SensorLimit.PreferredSize.Width) / 2, SensorValue.Bottom + 20);
+
             sensorLayoutPanel.Controls.Add(sensorPanel);
         }
 
+        //Eventi
         private void tempBar_Resize(object sender, EventArgs e)
         {
             PanelRoundBorder(tempBar, PANEL_RADIUS);
+        }
+
+        private void phBar_Resize(object sender, EventArgs e)
+        {
+            PanelRoundBorder(phBar, PANEL_RADIUS);
         }
     }
 }

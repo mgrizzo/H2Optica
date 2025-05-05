@@ -131,7 +131,7 @@
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgoAAACDCAYAAADs4TNsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAoNtJREFUeF7tfXd8HdW19ah3uVICBAIJHRIgDQIECC0J6QkJ5L0kL4338qX3DtiW
+        vgAADr4B6kKxwAAAoNtJREFUeF7tfXd8HdW19ah3uVICBAIJHRIgDQIECC0J6QkJ5L0kL4338qX3DtiW
         dHtRsQ02zcYGjHGjh97c1e/V7b2p9y7Z7O+39pmRxdgGS5ZcYP5YvyvdMnfulHPW2XvttSUikjRo+KAg
         0NJ5SUMwcYP6eQ0aNGjQcGDs94QGDe9XuFu6P33dijdoS23oz+rXNGjQoEHDgbHfExo0vB8R6Rg4//IV
         tZFTdK/RfxzR76tf16BBgwYNB8Z+T2jQ8H5DtHPw/GtWNvqyDA46sdxJO0JtN6vfo0GDBg0aDoz9ntCg
@@ -1584,9 +1584,6 @@
         //////wAAD///////gAAf//////+AAB///////8AAP///////4AB////////wAP////////AA///////
         /+AH////////8A/////////wD/////////gf////////+B////8=
 </value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
