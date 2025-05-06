@@ -137,7 +137,7 @@ namespace H2OpticaLogic
                 string sensorQuery = @"CREATE TABLE IF NOT EXISTS Sensori (
                                            SensorID INTEGER PRIMARY KEY,
                                            Name TEXT NOT NULL UNIQUE,
-                                           Limit REAL
+                                           SensorLimit REAL
                                     );";
 
                 //Query che crea la tabella dei dati
@@ -147,7 +147,7 @@ namespace H2OpticaLogic
                                         DateTime DATETIME NOT NULL,
                                         Volume REAL,
                                         Temp REAL,
-                                        pH REAL,
+                                        pH REAL
                                    
                                         FOREIGN KEY (SensorID) REFERENCES Sensori(SensorID)
                                     );";
@@ -172,7 +172,7 @@ namespace H2OpticaLogic
             }
         }
 
-        public void CheckDB()
+        public int CheckDB()
         {
             Logger.Log("Checking database integrity...");
 
@@ -181,6 +181,7 @@ namespace H2OpticaLogic
                 if (!File.Exists(_dbPath))
                 {
                     Logger.Log("Database file doesn't exist or not found");
+                    return -1;
                 }
 
                 //Controllo 'Sensori'
@@ -193,7 +194,7 @@ namespace H2OpticaLogic
                     Logger.Log($"Table '{checkedTable}' found");
 
                     //Controllo campi di 'Sensori'
-                    string[] columns = { "SensorID", "Name", "Limit" };
+                    string[] columns = { "SensorID", "Name", "SensorLimit" };
                     string[] types = { "INTEGER PRIMARY KEY", "TEXT NOT NULL UNIQUE", "REAL" };
 
                     for (int i = 0; i < columns.Length; i++)
@@ -235,6 +236,8 @@ namespace H2OpticaLogic
                         }
                     }
                 }
+
+                return 0;
             }
         }
 
@@ -266,7 +269,7 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                string query = @"UPDATE Sensori SET Limit = @limit WHERE SensorID = @sensId;";
+                string query = @"UPDATE Sensori SET SensorLimit = @limit WHERE SensorID = @sensId;";
 
                 try
                 {
@@ -392,7 +395,7 @@ namespace H2OpticaLogic
         {
             int sensorID = -1;
 
-            using (SQLiteConnection connection = new SQLiteConnection($"Data Source={_dbPath};Version=3;"))
+            using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
@@ -535,6 +538,33 @@ namespace H2OpticaLogic
             return volume;
         }
 
+        public double GetLatestVolume(int sensId)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+
+                string query = @"SELECT Volume FROM SensorData WHERE SensorID = @sensId AND Volume IS NOT NULL
+                                 ORDER BY DateTime DESC LIMIT 1";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@sensId", sensId);
+
+                    using(SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if(reader.Read())
+                        {
+                            double volume = reader.GetDouble(0);
+
+                            return volume;
+                        }
+                    }
+                }
+            }
+
+            return double.NaN;
+        }
         public List<Sensor> GetSensorList()
         {
             var sensList = new List<Sensor>();
@@ -543,7 +573,7 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                string sensorQuery = @"SELECT SensorID, Name, Limit FROM Sensori";
+                string sensorQuery = @"SELECT SensorID, Name, SensorLimit FROM Sensori";
 
                 using(SQLiteCommand cmd = new SQLiteCommand(sensorQuery, connection))
                 using(SQLiteDataReader reader = cmd.ExecuteReader())

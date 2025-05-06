@@ -15,8 +15,6 @@ namespace H2OpticaGUI
 {
    /*
     * TO-DO
-    * - Code a way to set temp a pH dynamically from Arduino values
-    * - ArduinoService class (to do on proj. work time)
     * - Handle events (buttons, other things???)
     * - Graphs
     * - DataGrid for sensors
@@ -28,14 +26,23 @@ namespace H2OpticaGUI
         private const int PANEL_RADIUS = 13;
         private const int BAR_RADIUS = 7;
 
-        private DBService _dbService;
+        private DBService dbService;
+
+        private List<Sensor> sensorList;
 
         public H2OpticaMain()
         {
             InitializeComponent();
 
             string _dbPath = Path.Combine(Application.StartupPath, "sensor_data.db");
-            _dbService = new DBService(_dbPath);
+            dbService = new DBService(_dbPath);
+
+            int dbStatus = dbService.CheckDB();
+
+            if (dbStatus == -1)
+                dbService.InitializeDB(); //Da sistemare (viva la corruzione!!!)
+
+            sensorList = dbService.GetSensorList();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,6 +63,18 @@ namespace H2OpticaGUI
 
             //Sensori
             PanelRoundBorder(sensorLayoutPanel, PANEL_RADIUS); //Pannello principale
+
+            foreach(Sensor sensor in sensorList)
+            {
+                AddSensor(sensor.SensorName, dbService.GetLatestVolume(sensor.SensorID), sensor.SensorLimit);
+            }
+
+            /*
+            AddSensor("Negro", 91, null);
+            AddSensor("Negro2", 10, 40);
+            AddSensor("Rubinetto cucina", 104, 69);
+            AddSensor("Tua mamma", 21, null);
+            */
         }
 
         private void PanelRoundBorder(Panel panel, int radius)
@@ -177,6 +196,13 @@ namespace H2OpticaGUI
         private void phBar_Resize(object sender, EventArgs e)
         {
             PanelRoundBorder(phBar, PANEL_RADIUS);
+        }
+
+
+        //Evento bottone aggiornamento pannello sensori
+        private void updateSensorCount_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

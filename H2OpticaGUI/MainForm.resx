@@ -131,7 +131,7 @@
   <data name="logoBox.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgoAAACDCAYAAADs4TNsAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vgAADr4B6kKxwAAAoNtJREFUeF7tfXd8HdW19ah3uVICBAIJHRIgDQIECC0J6QkJ5L0kL4338qX3DtiW
+        vQAADr0BR/uQrQAAoNtJREFUeF7tfXd8HdW19ah3uVICBAIJHRIgDQIECC0J6QkJ5L0kL4338qX3DtiW
         dHtRsQ02zcYGjHGjh97c1e/V7b2p9y7Z7O+39pmRxdgGS5ZcYP5YvyvdMnfulHPW2XvttSUikjRo+KAg
         0NJ5SUMwcYP6eQ0aNGjQcGDs94QGDe9XuFu6P33dijdoS23oz+rXNGjQoEHDgbHfExo0vB8R6Rg4//IV
         tZFTdK/RfxzR76tf16BBgwYNB8Z+T2jQ8H5DtHPw/GtWNvqyDA46sdxJO0JtN6vfo0GDBg0aDoz9ntCg
@@ -879,10 +879,10 @@
     <value>MiddleLeft</value>
   </data>
   <data name="updateSensorCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>116, 683</value>
+    <value>106, 683</value>
   </data>
   <data name="updateSensorCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 35</value>
+    <value>134, 36</value>
   </data>
   <data name="updateSensorCount.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1035,10 +1035,10 @@
     <value>Microsoft Sans Serif, 17pt, style=Bold</value>
   </data>
   <data name="tempLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 42</value>
+    <value>7, 38</value>
   </data>
   <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>170, 58</value>
+    <value>165, 66</value>
   </data>
   <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1074,10 +1074,10 @@
     <value>NoControl</value>
   </data>
   <data name="phLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>22, 195</value>
+    <value>6, 192</value>
   </data>
   <data name="phLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>136, 36</value>
+    <value>167, 42</value>
   </data>
   <data name="phLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1191,7 +1191,7 @@
     <value>24, 6</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>382, 37</value>
+    <value>470, 46</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>

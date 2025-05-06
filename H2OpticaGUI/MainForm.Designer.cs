@@ -82,6 +82,7 @@
             this.updateSensorCount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(7)))), ((int)(((byte)(27)))));
             this.updateSensorCount.Name = "updateSensorCount";
             this.updateSensorCount.UseVisualStyleBackColor = false;
+            this.updateSensorCount.Click += new System.EventHandler(this.updateSensorCount_Click);
             // 
             // sensorLayoutPanel
             // 
