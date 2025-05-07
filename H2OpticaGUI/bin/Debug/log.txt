@@ -1,7 +1,14 @@
-2025-05-06 16:39:47 - Checking database integrity...
-2025-05-06 16:39:47 - Database file doesn't exist or not found
-2025-05-06 16:39:47 - [EXCEPTION] SQL logic error
-near "Limit": syntax error 
+2025-05-07 14:11:38 - Checking database integrity...
+2025-05-07 14:13:03 - Checking database integrity...
+2025-05-07 14:15:39 - Checking database integrity...
+2025-05-07 14:15:39 - Table 'Sensori' doesn't exist or was not found
+2025-05-07 14:15:39 - Table 'SensorData' doesn't exist or was not found
+2025-05-07 14:16:22 - Checking database integrity...
+2025-05-07 14:16:22 - Table 'Sensori' doesn't exist or was not found
+2025-05-07 14:16:22 - Table 'SensorData' doesn't exist or was not found
+2025-05-07 14:23:38 - Successfully created table 'Sensori'
+2025-05-07 14:23:38 - [EXCEPTION] SQL logic error
+near "FOREIGN": syntax error 
    in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
    in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
@@ -10,28 +17,202 @@ near "Limit": syntax error
    in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
    in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
    in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
-   in H2OpticaLogic.DBService.InitializeDB() in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 158
-2025-05-06 16:42:01 - Checking database integrity...
-2025-05-06 16:42:02 - [EXCEPTION] Database is not open 
-   in System.Data.SQLite.SQLiteCommand.InitializeForReader()
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   in H2OpticaLogic.DBService.TableExists(SQLiteConnection connection, String tableName) in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 38
-2025-05-06 16:42:33 - Checking database integrity...
-2025-05-06 16:42:33 - [EXCEPTION] Database is not open 
-   in System.Data.SQLite.SQLiteCommand.InitializeForReader()
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   in H2OpticaLogic.DBService.TableExists(SQLiteConnection connection, String tableName) in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 38
-2025-05-06 16:44:44 - Checking database integrity...
-2025-05-06 16:44:44 - [EXCEPTION] Database is not open 
-   in System.Data.SQLite.SQLiteCommand.InitializeForReader()
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   in H2OpticaLogic.DBService.TableExists(SQLiteConnection connection, String tableName) in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 38
-2025-05-06 16:49:22 - Checking database integrity...
-2025-05-06 16:49:22 - [EXCEPTION] Database is not open 
-   in System.Data.SQLite.SQLiteCommand.InitializeForReader()
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
-   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   in H2OpticaLogic.DBService.TableExists(SQLiteConnection connection, String tableName) in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 38
+   in H2OpticaLogic.DBService.InitializeDB() in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\DBService.cs:riga 175
+2025-05-07 14:26:30 - Successfully created table 'Sensori'
+2025-05-07 14:26:30 - Successfully created table 'SensorData'
+2025-05-07 14:27:16 - Successfully created table 'Sensori'
+2025-05-07 14:27:16 - Successfully created table 'SensorData'
+2025-05-07 14:29:07 - Successfully created table 'Sensori'
+2025-05-07 14:29:07 - Successfully created table 'SensorData'
+2025-05-07 14:29:07 - Checking database integrity...
+2025-05-07 14:29:07 - Table 'Sensori' found
+2025-05-07 14:29:07 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 14:29:07 - Column 'Name' found in table 'Sensori'
+2025-05-07 14:29:07 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 14:29:07 - Table 'SensorData' found
+2025-05-07 14:29:07 - Column 'Id' found in table 'SensorData'
+2025-05-07 14:29:07 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 14:29:07 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 14:29:07 - Column 'Volume' found in table 'SensorData'
+2025-05-07 14:29:07 - Column 'Temp' found in table 'SensorData'
+2025-05-07 14:29:07 - Column 'pH' found in table 'SensorData'
+2025-05-07 14:52:28 - Successfully created table 'Sensori'
+2025-05-07 14:52:28 - Successfully created table 'SensorData'
+2025-05-07 14:52:28 - Checking database integrity...
+2025-05-07 14:52:28 - Table 'Sensori' found
+2025-05-07 14:52:28 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 14:52:28 - Column 'Name' found in table 'Sensori'
+2025-05-07 14:52:28 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 14:52:28 - Table 'SensorData' found
+2025-05-07 14:52:28 - Column 'Id' found in table 'SensorData'
+2025-05-07 14:52:28 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 14:52:28 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 14:52:28 - Column 'Volume' found in table 'SensorData'
+2025-05-07 14:52:28 - Column 'Temp' found in table 'SensorData'
+2025-05-07 14:52:28 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:12:22 - Successfully created table 'Sensori'
+2025-05-07 15:12:22 - Successfully created table 'SensorData'
+2025-05-07 15:12:22 - Checking database integrity...
+2025-05-07 15:12:22 - Table 'Sensori' found
+2025-05-07 15:12:22 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:12:22 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:12:22 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:12:22 - Table 'SensorData' found
+2025-05-07 15:12:22 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:12:22 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:12:22 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:12:22 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:12:22 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:12:22 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:12:58 - Successfully created table 'Sensori'
+2025-05-07 15:12:58 - Successfully created table 'SensorData'
+2025-05-07 15:12:58 - Checking database integrity...
+2025-05-07 15:12:58 - Table 'Sensori' found
+2025-05-07 15:12:58 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:12:58 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:12:58 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:12:58 - Table 'SensorData' found
+2025-05-07 15:12:58 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:12:58 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:12:58 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:12:58 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:12:58 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:12:58 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:13:28 - Successfully created table 'Sensori'
+2025-05-07 15:13:28 - Successfully created table 'SensorData'
+2025-05-07 15:13:28 - Checking database integrity...
+2025-05-07 15:13:28 - Table 'Sensori' found
+2025-05-07 15:13:28 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:13:28 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:13:28 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:13:28 - Table 'SensorData' found
+2025-05-07 15:13:28 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:13:28 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:13:28 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:13:28 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:13:28 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:13:28 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:27:55 - Successfully created table 'Sensori'
+2025-05-07 15:27:55 - Successfully created table 'SensorData'
+2025-05-07 15:27:55 - Checking database integrity...
+2025-05-07 15:27:55 - Table 'Sensori' found
+2025-05-07 15:27:55 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:27:55 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:27:55 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:27:55 - Table 'SensorData' found
+2025-05-07 15:27:55 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:27:55 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:27:55 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:27:55 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:27:55 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:27:55 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:45:25 - Successfully created table 'Sensori'
+2025-05-07 15:45:25 - Successfully created table 'SensorData'
+2025-05-07 15:45:25 - Checking database integrity...
+2025-05-07 15:45:25 - Table 'Sensori' found
+2025-05-07 15:45:25 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:45:25 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:45:25 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:45:25 - Table 'SensorData' found
+2025-05-07 15:45:25 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:45:25 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:45:25 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:45:25 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:45:25 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:45:25 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:45:44 - Successfully created table 'Sensori'
+2025-05-07 15:45:44 - Successfully created table 'SensorData'
+2025-05-07 15:45:44 - Checking database integrity...
+2025-05-07 15:45:44 - Table 'Sensori' found
+2025-05-07 15:45:44 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:45:44 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:45:44 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:45:44 - Table 'SensorData' found
+2025-05-07 15:45:44 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:45:44 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:45:44 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:45:44 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:45:44 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:45:44 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:47:30 - Successfully created table 'Sensori'
+2025-05-07 15:47:30 - Successfully created table 'SensorData'
+2025-05-07 15:47:30 - Checking database integrity...
+2025-05-07 15:47:30 - Table 'Sensori' found
+2025-05-07 15:47:30 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:47:30 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:47:30 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:47:30 - Table 'SensorData' found
+2025-05-07 15:47:30 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:47:30 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:47:30 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:47:30 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:47:30 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:47:30 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:47:42 - Successfully created table 'Sensori'
+2025-05-07 15:47:42 - Successfully created table 'SensorData'
+2025-05-07 15:47:42 - Checking database integrity...
+2025-05-07 15:47:42 - Table 'Sensori' found
+2025-05-07 15:47:42 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:47:42 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:47:42 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:47:42 - Table 'SensorData' found
+2025-05-07 15:47:42 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:47:42 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:47:42 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:47:42 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:47:42 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:47:42 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:48:50 - Successfully created table 'Sensori'
+2025-05-07 15:48:50 - Successfully created table 'SensorData'
+2025-05-07 15:48:50 - Checking database integrity...
+2025-05-07 15:48:50 - Table 'Sensori' found
+2025-05-07 15:48:50 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:48:50 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:48:50 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:48:50 - Table 'SensorData' found
+2025-05-07 15:48:50 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:48:50 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:48:50 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:48:50 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:48:50 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:48:50 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:49:15 - Successfully created table 'Sensori'
+2025-05-07 15:49:15 - Successfully created table 'SensorData'
+2025-05-07 15:49:15 - Checking database integrity...
+2025-05-07 15:49:15 - Table 'Sensori' found
+2025-05-07 15:49:15 - Column 'SensorID' found in table 'Sensori'
+2025-05-07 15:49:15 - Column 'Name' found in table 'Sensori'
+2025-05-07 15:49:15 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-07 15:49:15 - Table 'SensorData' found
+2025-05-07 15:49:15 - Column 'Id' found in table 'SensorData'
+2025-05-07 15:49:15 - Column 'SensorID' found in table 'SensorData'
+2025-05-07 15:49:15 - Column 'DateTime' found in table 'SensorData'
+2025-05-07 15:49:15 - Column 'Volume' found in table 'SensorData'
+2025-05-07 15:49:15 - Column 'Temp' found in table 'SensorData'
+2025-05-07 15:49:15 - Column 'pH' found in table 'SensorData'
+2025-05-07 15:51:10 - Successfully created table 'Sensori'
+2025-05-07 15:51:10 - Successfully created table 'SensorData'
+2025-05-07 15:52:43 - Successfully created table 'Sensori'
+2025-05-07 15:52:43 - Successfully created table 'SensorData'
+2025-05-07 16:07:32 - Successfully created table 'Sensori'
+2025-05-07 16:07:32 - Successfully created table 'SensorData'
+2025-05-07 16:07:32 - Trying to get async json response...
+2025-05-07 16:07:32 - [EXCEPTION] URI non valido: specificata porta non valida. 
+   in System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   in System.Uri..ctor(String uriString, UriKind uriKind)
+   in System.Net.Http.HttpClient.CreateUri(String uri)
+   in System.Net.Http.HttpClient.GetAsync(String requestUri)
+   in H2OpticaLogic.ArduinoService.<GetLatestReadingAsync>d__3.MoveNext() in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\ArduinoService.cs:riga 35
+2025-05-07 16:07:32 - Returning 'null'...
+2025-05-07 16:07:46 - Successfully created table 'Sensori'
+2025-05-07 16:07:46 - Successfully created table 'SensorData'
+2025-05-07 16:07:46 - Trying to get async json response...
+2025-05-07 16:07:46 - [EXCEPTION] URI non valido: specificata porta non valida. 
+   in System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   in System.Uri..ctor(String uriString, UriKind uriKind)
+   in System.Net.Http.HttpClient.CreateUri(String uri)
+   in System.Net.Http.HttpClient.GetAsync(String requestUri)
+   in H2OpticaLogic.ArduinoService.<GetLatestReadingAsync>d__3.MoveNext() in C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\ArduinoService.cs:riga 35
+2025-05-07 16:07:46 - Returning 'null'...
+2025-05-07 16:17:22 - Successfully created table 'Sensori'
+2025-05-07 16:17:22 - Successfully created table 'SensorData'

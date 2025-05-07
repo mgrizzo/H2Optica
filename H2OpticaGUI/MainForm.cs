@@ -15,10 +15,9 @@ namespace H2OpticaGUI
 {
    /*
     * TO-DO
-    * - Handle events (buttons, other things???)
+    * - Handle client-side data
     * - Graphs
-    * - DataGrid for sensors
-    * - Details?
+    * - DataGrid for sensors??
     */
 
     public partial class H2OpticaMain : Form
@@ -27,26 +26,49 @@ namespace H2OpticaGUI
         private const int BAR_RADIUS = 7;
 
         private DBService dbService;
+        private ArduinoService arduinoService;
 
-        private List<Sensor> sensorList;
+        private List<Sensor> sensorList = new List<Sensor>();
+
+        internal DataCollection latestCollection = new DataCollection();
+        internal DataCollection arduinoCollection = new DataCollection();
+
+        internal double totalVolume = 0.0;
+
+        private Timer updateTimer;
+        private Timer arduinoRequest;
 
         public H2OpticaMain()
         {
             InitializeComponent();
+            InitializeTimer();
 
             string _dbPath = Path.Combine(Application.StartupPath, "sensor_data.db");
             dbService = new DBService(_dbPath);
 
-            int dbStatus = dbService.CheckDB();
+            dbService.InitializeDB();
 
-            if (dbStatus == -1)
-                dbService.InitializeDB(); //Da sistemare (viva la corruzione!!!)
+            //arduinoService = new ArduinoService(ip_address);
 
-            sensorList = dbService.GetSensorList();
+            latestCollection = arduinoService.GetLatestReadingAsync().Result;
         }
 
+        private void InitializeTimer()
+        {
+            updateTimer = new Timer();
+            updateTimer.Interval = 1000;
+            updateTimer.Tick += new EventHandler(updateTimer_Tick);
+            updateTimer.Start();
+
+            arduinoRequest = new Timer();
+            arduinoRequest.Interval =500;
+            arduinoRequest.Tick += new EventHandler(arduinoRequest_Tick);
+            arduinoRequest.Start();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            dbService.CheckDB();
+
             //Volume giornaliero
             PanelRoundBorder(DailyContainer, PANEL_RADIUS);
 
@@ -64,17 +86,9 @@ namespace H2OpticaGUI
             //Sensori
             PanelRoundBorder(sensorLayoutPanel, PANEL_RADIUS); //Pannello principale
 
-            foreach(Sensor sensor in sensorList)
-            {
-                AddSensor(sensor.SensorName, dbService.GetLatestVolume(sensor.SensorID), sensor.SensorLimit);
-            }
+            latestCollection = dbService.GetLatestSensorData();
 
-            /*
-            AddSensor("Negro", 91, null);
-            AddSensor("Negro2", 10, 40);
-            AddSensor("Rubinetto cucina", 104, 69);
-            AddSensor("Tua mamma", 21, null);
-            */
+            UpdateSensorPanel(sensorList);
         }
 
         private void PanelRoundBorder(Panel panel, int radius)
@@ -134,7 +148,24 @@ namespace H2OpticaGUI
             else
                 phBar.BackColor = Color.FromArgb(106, 67, 247);
         }
+        private void UpdateSensorPanel(List<Sensor> sensList)
+        {
+            foreach (Sensor sensor in sensList)
+            {
+                AddSensor(sensor.SensorName, dbService.GetLatestVolume(sensor.SensorID), sensor.SensorLimit);
+            }
+        }
+        private double GetTotalVolume()
+        {
+            double totalVolume = 0;
 
+            foreach (var flux in latestCollection.Flux)
+            {
+                totalVolume += flux.Value;
+            }
+
+            return totalVolume;
+        }
         private void AddSensor(string name, double data, double? limit)
         {
             Panel sensorPanel = new Panel
@@ -188,6 +219,28 @@ namespace H2OpticaGUI
         }
 
         //Eventi
+        private void updateTimer_Tick(object sender, EventArgs e)
+        {
+            latestCollection.Flux.Clear();
+            latestCollection.Flux = arduinoCollection.Flux;
+
+            latestCollection.Temp = dbService.GetLastTemp();
+            latestCollection.pH = dbService.GetLastpH();
+
+            double totalVolume = GetTotalVolume();
+
+            totalVolLabel.Text = $"Oggi hai utilizzato {totalVolume}L";
+            tempLabel.Text = $"Temperatura: {latestCollection.Temp}°C";
+            phLabel.Text = $"pH: {latestCollection.pH}";
+
+            UpdateTempBar((double)latestCollection.Temp);
+            UpdatephBar((double)latestCollection.pH);
+        }
+        private void arduinoRequest_Tick(object sender, EventArgs e)
+        {
+            arduinoCollection = arduinoService.GetLatestReadingAsync().Result;
+        }
+
         private void tempBar_Resize(object sender, EventArgs e)
         {
             PanelRoundBorder(tempBar, PANEL_RADIUS);
@@ -202,7 +255,19 @@ namespace H2OpticaGUI
         //Evento bottone aggiornamento pannello sensori
         private void updateSensorCount_Click(object sender, EventArgs e)
         {
+            List<Sensor> latestList = new List<Sensor>();
 
+            latestList = dbService.GetSensorList();
+
+            bool congruent = sensorList.Count == latestList.Count && !sensorList.Except(latestList).Any() && !latestList.Except(sensorList).Any();
+
+            if(!congruent)
+            {
+                sensorList.Clear();
+                sensorList.AddRange(latestList);
+
+                UpdateSensorPanel(sensorList);
+            }
         }
     }
 }

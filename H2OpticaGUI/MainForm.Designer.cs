@@ -43,7 +43,7 @@
             this.tempBarContainer = new System.Windows.Forms.Panel();
             this.tempBar = new System.Windows.Forms.Panel();
             this.DailyContainer = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.totalVolLabel = new System.Windows.Forms.Label();
             this.MainLayout.SuspendLayout();
             this.FlowAndLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -151,14 +151,14 @@
             // 
             resources.ApplyResources(this.DailyContainer, "DailyContainer");
             this.DailyContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(26)))), ((int)(((byte)(44)))));
-            this.DailyContainer.Controls.Add(this.label2);
+            this.DailyContainer.Controls.Add(this.totalVolLabel);
             this.DailyContainer.Name = "DailyContainer";
             // 
-            // label2
+            // totalVolLabel
             // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
-            this.label2.Name = "label2";
+            resources.ApplyResources(this.totalVolLabel, "totalVolLabel");
+            this.totalVolLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
+            this.totalVolLabel.Name = "totalVolLabel";
             // 
             // H2OpticaMain
             // 
@@ -193,7 +193,7 @@
         private System.Windows.Forms.TableLayoutPanel FixedAndGraph;
         private System.Windows.Forms.TableLayoutPanel FixedSensors;
         private System.Windows.Forms.Label tempLabel;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label totalVolLabel;
         private System.Windows.Forms.Label phLabel;
         private System.Windows.Forms.Panel tempBarContainer;
         private System.Windows.Forms.Panel tempBar;

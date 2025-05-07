@@ -18,7 +18,7 @@ namespace H2OpticaLogic
 
         public static void Log(Exception exception)
         {
-            Log($"[EXCEPTION] {exception.Message} \n{exception.StackTrace}");
+            Log($"[EXCEPTION] - {DateTime.Now:yyyy-MM-dd HH:mm:ss}: {exception.Message} \n{exception.StackTrace}");
         }
     }
 }

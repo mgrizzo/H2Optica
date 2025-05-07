@@ -10,7 +10,7 @@ namespace H2OpticaLogic
 {
     public class DataCollection
     {
-        public readonly DateTime timestamp;
+        public DateTime timestamp {  get; set; }
 
         [JsonProperty("pH")]
         public double? pH {  get; set; }
