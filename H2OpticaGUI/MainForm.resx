@@ -879,10 +879,10 @@
     <value>MiddleLeft</value>
   </data>
   <data name="updateSensorCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 683</value>
+    <value>116, 683</value>
   </data>
   <data name="updateSensorCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>134, 36</value>
+    <value>113, 35</value>
   </data>
   <data name="updateSensorCount.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1035,10 +1035,10 @@
     <value>Microsoft Sans Serif, 17pt, style=Bold</value>
   </data>
   <data name="tempLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 38</value>
+    <value>5, 42</value>
   </data>
   <data name="tempLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>165, 66</value>
+    <value>170, 58</value>
   </data>
   <data name="tempLabel.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1074,10 +1074,10 @@
     <value>NoControl</value>
   </data>
   <data name="phLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 192</value>
+    <value>22, 195</value>
   </data>
   <data name="phLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 42</value>
+    <value>136, 36</value>
   </data>
   <data name="phLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -1191,13 +1191,13 @@
     <value>24, 6</value>
   </data>
   <data name="totalVolLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>652, 46</value>
+    <value>348, 37</value>
   </data>
   <data name="totalVolLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="totalVolLabel.Text" xml:space="preserve">
-    <value>Oggi hai utilizzato: {totalVolume}L</value>
+    <value>Oggi hai utilizzato: 0L</value>
   </data>
   <data name="totalVolLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
@@ -1235,6 +1235,57 @@
   <data name="&gt;&gt;DailyContainer.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="ChartPanel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="VolumeChart.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>None</value>
+  </data>
+  <data name="VolumeChart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 21</value>
+  </data>
+  <data name="VolumeChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>547, 275</value>
+  </data>
+  <data name="VolumeChart.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="VolumeChart.Text" xml:space="preserve">
+    <value>chart1</value>
+  </data>
+  <data name="&gt;&gt;VolumeChart.Name" xml:space="preserve">
+    <value>VolumeChart</value>
+  </data>
+  <data name="&gt;&gt;VolumeChart.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  </data>
+  <data name="&gt;&gt;VolumeChart.Parent" xml:space="preserve">
+    <value>ChartPanel</value>
+  </data>
+  <data name="&gt;&gt;VolumeChart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ChartPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 368</value>
+  </data>
+  <data name="ChartPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>599, 318</value>
+  </data>
+  <data name="ChartPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ChartPanel.Name" xml:space="preserve">
+    <value>ChartPanel</value>
+  </data>
+  <data name="&gt;&gt;ChartPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ChartPanel.Parent" xml:space="preserve">
+    <value>FixedAndGraph</value>
+  </data>
+  <data name="&gt;&gt;ChartPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="FixedAndGraph.Location" type="System.Drawing.Point, System.Drawing">
     <value>368, 15</value>
   </data>
@@ -1260,7 +1311,7 @@
     <value>1</value>
   </data>
   <data name="FixedAndGraph.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FixedSensors" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="DailyContainer" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,8,Percent,43,Percent,49" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="FixedSensors" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="DailyContainer" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="ChartPanel" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,8,Percent,43,Percent,49" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="MainLayout.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

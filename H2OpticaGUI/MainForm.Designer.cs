@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(H2OpticaMain));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.MainLayout = new System.Windows.Forms.TableLayoutPanel();
             this.FlowAndLogo = new System.Windows.Forms.TableLayoutPanel();
             this.logoBox = new System.Windows.Forms.PictureBox();
@@ -44,6 +47,8 @@
             this.tempBar = new System.Windows.Forms.Panel();
             this.DailyContainer = new System.Windows.Forms.Panel();
             this.totalVolLabel = new System.Windows.Forms.Label();
+            this.VolumeChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartPanel = new System.Windows.Forms.Panel();
             this.MainLayout.SuspendLayout();
             this.FlowAndLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoBox)).BeginInit();
@@ -52,6 +57,8 @@
             this.phBarContainer.SuspendLayout();
             this.tempBarContainer.SuspendLayout();
             this.DailyContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VolumeChart)).BeginInit();
+            this.ChartPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainLayout
@@ -95,6 +102,7 @@
             resources.ApplyResources(this.FixedAndGraph, "FixedAndGraph");
             this.FixedAndGraph.Controls.Add(this.FixedSensors, 0, 1);
             this.FixedAndGraph.Controls.Add(this.DailyContainer, 0, 0);
+            this.FixedAndGraph.Controls.Add(this.ChartPanel, 0, 2);
             this.FixedAndGraph.Name = "FixedAndGraph";
             // 
             // FixedSensors
@@ -126,12 +134,14 @@
             resources.ApplyResources(this.tempLabel, "tempLabel");
             this.tempLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
             this.tempLabel.Name = "tempLabel";
+            this.tempLabel.TextChanged += new System.EventHandler(this.tempLabel_TextChanged);
             // 
             // phLabel
             // 
             resources.ApplyResources(this.phLabel, "phLabel");
             this.phLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
             this.phLabel.Name = "phLabel";
+            this.phLabel.TextChanged += new System.EventHandler(this.phLabel_TextChanged);
             // 
             // tempBarContainer
             // 
@@ -159,6 +169,28 @@
             resources.ApplyResources(this.totalVolLabel, "totalVolLabel");
             this.totalVolLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(141)))), ((int)(((byte)(223)))));
             this.totalVolLabel.Name = "totalVolLabel";
+            this.totalVolLabel.TextChanged += new System.EventHandler(this.totalVolLabel_TextChanged);
+            // 
+            // VolumeChart
+            // 
+            resources.ApplyResources(this.VolumeChart, "VolumeChart");
+            this.VolumeChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(26)))), ((int)(((byte)(44)))));
+            chartArea1.Name = "ChartArea1";
+            this.VolumeChart.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.VolumeChart.Legends.Add(legend1);
+            this.VolumeChart.Name = "VolumeChart";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.VolumeChart.Series.Add(series1);
+            // 
+            // ChartPanel
+            // 
+            resources.ApplyResources(this.ChartPanel, "ChartPanel");
+            this.ChartPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(26)))), ((int)(((byte)(44)))));
+            this.ChartPanel.Controls.Add(this.VolumeChart);
+            this.ChartPanel.Name = "ChartPanel";
             // 
             // H2OpticaMain
             // 
@@ -179,6 +211,8 @@
             this.tempBarContainer.ResumeLayout(false);
             this.DailyContainer.ResumeLayout(false);
             this.DailyContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VolumeChart)).EndInit();
+            this.ChartPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,6 +234,8 @@
         private System.Windows.Forms.Panel DailyContainer;
         private System.Windows.Forms.Panel phBarContainer;
         private System.Windows.Forms.Panel phBar;
+        private System.Windows.Forms.DataVisualization.Charting.Chart VolumeChart;
+        private System.Windows.Forms.Panel ChartPanel;
     }
 }
 

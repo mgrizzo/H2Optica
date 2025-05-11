@@ -51,3 +51,42 @@ C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.dll
 C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\obj\Debug\H2OpticaLogic.pdb
 C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\bin\Debug\Newtonsoft.Json.dll
 C:\Users\matte\Source\Repos\H2Optica\H2OpticaLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\libHarfBuzzSharp.dylib
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x86\libHarfBuzzSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x64\libHarfBuzzSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm64\libHarfBuzzSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\libSkiaSharp.dylib
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x86\libSkiaSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x64\libSkiaSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm64\libSkiaSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x64\libHarfBuzzSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm\libHarfBuzzSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm64\libHarfBuzzSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\musl-x64\libHarfBuzzSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\x64\libSkiaSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm\libSkiaSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\arm64\libSkiaSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\musl-x64\libSkiaSharp.so
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\HarfBuzzSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\ScottPlot.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.HarfBuzz.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Buffers.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Memory.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.ValueTuple.dll
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\HarfBuzzSharp.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\HarfBuzzSharp.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\ScottPlot.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.HarfBuzz.pdb
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\SkiaSharp.HarfBuzz.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Buffers.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Memory.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\bin\Debug\System.ValueTuple.xml

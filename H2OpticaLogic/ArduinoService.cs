@@ -15,9 +15,9 @@ namespace H2OpticaLogic
         private readonly HttpClient _httpClient;
         private readonly string _arduinoBaseURL;
 
-        public ArduinoService(string ipAddress)
+        public ArduinoService(string hostname)
         {
-            _arduinoBaseURL = $"http://{ipAddress}/";
+            _arduinoBaseURL = $"http://{hostname}/";
 
             _httpClient = new HttpClient
             {
@@ -37,7 +37,7 @@ namespace H2OpticaLogic
 
                 string json = await response.Content.ReadAsStringAsync();
                 DataCollection data = JsonConvert.DeserializeObject<DataCollection>(json);
-                data.ProcessFlux();
+                data.Flows.ProcessFlux();
 
                 return data;
             }

@@ -216,3 +216,1264 @@ near "FOREIGN": syntax error
 2025-05-07 16:07:46 - Returning 'null'...
 2025-05-07 16:17:22 - Successfully created table 'Sensori'
 2025-05-07 16:17:22 - Successfully created table 'SensorData'
+2025-05-08 15:46:56 - Successfully created table 'Sensori'
+2025-05-08 15:46:56 - Successfully created table 'SensorData'
+2025-05-08 15:46:56 - Checking database integrity...
+2025-05-08 15:46:56 - Table 'Sensori' found
+2025-05-08 15:46:56 - Column 'SensorID' found in table 'Sensori'
+2025-05-08 15:46:56 - Column 'Name' found in table 'Sensori'
+2025-05-08 15:46:56 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-08 15:46:56 - Table 'SensorData' found
+2025-05-08 15:46:56 - Column 'Id' found in table 'SensorData'
+2025-05-08 15:46:56 - Column 'SensorID' found in table 'SensorData'
+2025-05-08 15:46:56 - Column 'DateTime' found in table 'SensorData'
+2025-05-08 15:46:56 - Column 'Volume' found in table 'SensorData'
+2025-05-08 15:46:56 - Column 'Temp' found in table 'SensorData'
+2025-05-08 15:46:56 - Column 'pH' found in table 'SensorData'
+2025-05-08 15:47:17 - Successfully created table 'Sensori'
+2025-05-08 15:47:17 - Successfully created table 'SensorData'
+2025-05-08 15:47:17 - Checking database integrity...
+2025-05-08 15:47:17 - Table 'Sensori' found
+2025-05-08 15:47:17 - Column 'SensorID' found in table 'Sensori'
+2025-05-08 15:47:17 - Column 'Name' found in table 'Sensori'
+2025-05-08 15:47:17 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-08 15:47:17 - Table 'SensorData' found
+2025-05-08 15:47:17 - Column 'Id' found in table 'SensorData'
+2025-05-08 15:47:17 - Column 'SensorID' found in table 'SensorData'
+2025-05-08 15:47:17 - Column 'DateTime' found in table 'SensorData'
+2025-05-08 15:47:17 - Column 'Volume' found in table 'SensorData'
+2025-05-08 15:47:17 - Column 'Temp' found in table 'SensorData'
+2025-05-08 15:47:17 - Column 'pH' found in table 'SensorData'
+2025-05-11 09:51:49 - Successfully created table 'Sensori'
+2025-05-11 09:51:49 - Successfully created table 'SensorData'
+2025-05-11 09:51:49 - Checking database integrity...
+2025-05-11 09:51:49 - Table 'Sensori' found
+2025-05-11 09:51:49 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 09:51:49 - Column 'Name' found in table 'Sensori'
+2025-05-11 09:51:49 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 09:51:49 - Table 'SensorData' found
+2025-05-11 09:51:49 - Column 'Id' found in table 'SensorData'
+2025-05-11 09:51:49 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Temp' found in table 'SensorData'
+2025-05-11 09:51:49 - Column 'pH' found in table 'SensorData'
+2025-05-11 09:51:49 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 09:51:49 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 09:51:49 - [EXCEPTION] - 2025-05-11 09:51:49: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 814
+2025-05-11 10:11:46 - Successfully created table 'Sensori'
+2025-05-11 10:11:46 - Successfully created table 'SensorData'
+2025-05-11 10:11:46 - Checking database integrity...
+2025-05-11 10:11:46 - Table 'Sensori' found
+2025-05-11 10:11:46 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 10:11:46 - Column 'Name' found in table 'Sensori'
+2025-05-11 10:11:46 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 10:11:46 - Table 'SensorData' found
+2025-05-11 10:11:46 - Column 'Id' found in table 'SensorData'
+2025-05-11 10:11:46 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 10:11:46 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Temp' found in table 'SensorData'
+2025-05-11 10:11:47 - Column 'pH' found in table 'SensorData'
+2025-05-11 10:11:47 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 10:11:47 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 10:11:47 - [EXCEPTION] - 2025-05-11 10:11:47: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 814
+2025-05-11 12:19:27 - Successfully created table 'Sensori'
+2025-05-11 12:19:27 - Successfully created table 'SensorData'
+2025-05-11 12:19:27 - Checking database integrity...
+2025-05-11 12:19:27 - Table 'Sensori' found
+2025-05-11 12:19:27 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 12:19:27 - Column 'Name' found in table 'Sensori'
+2025-05-11 12:19:27 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 12:19:27 - Table 'SensorData' found
+2025-05-11 12:19:27 - Column 'Id' found in table 'SensorData'
+2025-05-11 12:19:27 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Temp' found in table 'SensorData'
+2025-05-11 12:19:27 - Column 'pH' found in table 'SensorData'
+2025-05-11 12:19:27 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 12:19:27 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:27 - [EXCEPTION] - 2025-05-11 12:19:27: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 854
+2025-05-11 12:19:40 - Successfully created table 'Sensori'
+2025-05-11 12:19:40 - Successfully created table 'SensorData'
+2025-05-11 12:19:40 - Checking database integrity...
+2025-05-11 12:19:40 - Table 'Sensori' found
+2025-05-11 12:19:40 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 12:19:40 - Column 'Name' found in table 'Sensori'
+2025-05-11 12:19:40 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 12:19:40 - Table 'SensorData' found
+2025-05-11 12:19:40 - Column 'Id' found in table 'SensorData'
+2025-05-11 12:19:40 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Temp' found in table 'SensorData'
+2025-05-11 12:19:40 - Column 'pH' found in table 'SensorData'
+2025-05-11 12:19:40 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 12:19:40 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 12:19:40 - [EXCEPTION] - 2025-05-11 12:19:40: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 854
+2025-05-11 15:07:04 - Successfully created table 'Sensori'
+2025-05-11 15:07:04 - Successfully created table 'SensorData'
+2025-05-11 15:07:04 - Checking database integrity...
+2025-05-11 15:07:04 - Table 'Sensori' found
+2025-05-11 15:07:04 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 15:07:04 - Column 'Name' found in table 'Sensori'
+2025-05-11 15:07:04 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 15:07:04 - Table 'SensorData' found
+2025-05-11 15:07:04 - Column 'Id' found in table 'SensorData'
+2025-05-11 15:07:04 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Temp' found in table 'SensorData'
+2025-05-11 15:07:04 - Column 'pH' found in table 'SensorData'
+2025-05-11 15:07:04 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 15:07:04 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:04 - [EXCEPTION] - 2025-05-11 15:07:04: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 858
+2025-05-11 15:07:32 - Successfully created table 'Sensori'
+2025-05-11 15:07:32 - Successfully created table 'SensorData'
+2025-05-11 15:07:32 - Checking database integrity...
+2025-05-11 15:07:32 - Table 'Sensori' found
+2025-05-11 15:07:32 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 15:07:32 - Column 'Name' found in table 'Sensori'
+2025-05-11 15:07:32 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 15:07:32 - Table 'SensorData' found
+2025-05-11 15:07:32 - Column 'Id' found in table 'SensorData'
+2025-05-11 15:07:32 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Temp' found in table 'SensorData'
+2025-05-11 15:07:32 - Column 'pH' found in table 'SensorData'
+2025-05-11 15:07:32 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 15:07:32 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:07:32 - [EXCEPTION] - 2025-05-11 15:07:32: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 858
+2025-05-11 15:19:34 - Successfully created table 'Sensori'
+2025-05-11 15:19:34 - Successfully created table 'SensorData'
+2025-05-11 15:19:34 - Checking database integrity...
+2025-05-11 15:19:34 - Table 'Sensori' found
+2025-05-11 15:19:34 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 15:19:34 - Column 'Name' found in table 'Sensori'
+2025-05-11 15:19:34 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 15:19:34 - Table 'SensorData' found
+2025-05-11 15:19:34 - Column 'Id' found in table 'SensorData'
+2025-05-11 15:19:34 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Temp' found in table 'SensorData'
+2025-05-11 15:19:34 - Column 'pH' found in table 'SensorData'
+2025-05-11 15:19:34 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 15:19:34 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:19:34 - [EXCEPTION] - 2025-05-11 15:19:34: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 858
+2025-05-11 15:20:01 - Successfully created table 'Sensori'
+2025-05-11 15:20:01 - Successfully created table 'SensorData'
+2025-05-11 15:20:01 - Checking database integrity...
+2025-05-11 15:20:01 - Table 'Sensori' found
+2025-05-11 15:20:01 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 15:20:01 - Column 'Name' found in table 'Sensori'
+2025-05-11 15:20:01 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 15:20:01 - Table 'SensorData' found
+2025-05-11 15:20:01 - Column 'Id' found in table 'SensorData'
+2025-05-11 15:20:01 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Temp' found in table 'SensorData'
+2025-05-11 15:20:01 - Column 'pH' found in table 'SensorData'
+2025-05-11 15:20:01 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 15:20:01 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 15:20:01 - [EXCEPTION] - 2025-05-11 15:20:01: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 858
+2025-05-11 18:00:46 - Successfully created table 'Sensori'
+2025-05-11 18:00:46 - Successfully created table 'SensorData'
+2025-05-11 18:00:46 - Checking database integrity...
+2025-05-11 18:00:46 - Table 'Sensori' found
+2025-05-11 18:00:46 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 18:00:46 - Column 'Name' found in table 'Sensori'
+2025-05-11 18:00:46 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 18:00:46 - Table 'SensorData' found
+2025-05-11 18:00:46 - Column 'Id' found in table 'SensorData'
+2025-05-11 18:00:46 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Temp' found in table 'SensorData'
+2025-05-11 18:00:46 - Column 'pH' found in table 'SensorData'
+2025-05-11 18:00:46 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 18:00:46 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:00:46 - [EXCEPTION] - 2025-05-11 18:00:46: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 891
+2025-05-11 18:03:14 - Successfully created table 'Sensori'
+2025-05-11 18:03:14 - Successfully created table 'SensorData'
+2025-05-11 18:03:14 - Checking database integrity...
+2025-05-11 18:03:14 - Table 'Sensori' found
+2025-05-11 18:03:14 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 18:03:14 - Column 'Name' found in table 'Sensori'
+2025-05-11 18:03:14 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 18:03:14 - Table 'SensorData' found
+2025-05-11 18:03:14 - Column 'Id' found in table 'SensorData'
+2025-05-11 18:03:14 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Temp' found in table 'SensorData'
+2025-05-11 18:03:14 - Column 'pH' found in table 'SensorData'
+2025-05-11 18:03:14 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 18:03:14 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 18:03:14 - [EXCEPTION] - 2025-05-11 18:03:14: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 891
+2025-05-11 22:01:32 - Successfully created table 'Sensori'
+2025-05-11 22:01:32 - Successfully created table 'SensorData'
+2025-05-11 22:01:32 - Checking database integrity...
+2025-05-11 22:01:32 - Table 'Sensori' found
+2025-05-11 22:01:32 - Column 'SensorID' found in table 'Sensori'
+2025-05-11 22:01:32 - Column 'Name' found in table 'Sensori'
+2025-05-11 22:01:32 - Column 'SensorLimit' found in table 'Sensori'
+2025-05-11 22:01:32 - Table 'SensorData' found
+2025-05-11 22:01:32 - Column 'Id' found in table 'SensorData'
+2025-05-11 22:01:32 - Column 'Timestamp' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'DATETIME NOT NULL' named 'Timestamp' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Temp' found in table 'SensorData'
+2025-05-11 22:01:32 - Column 'pH' found in table 'SensorData'
+2025-05-11 22:01:32 - Column 'Flow0' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow0' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Flow1' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow1' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Flow2' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow2' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Flow3' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow3' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Flow4' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow4' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - Column 'Flow5' was not found in table 'SensorData'
+2025-05-11 22:01:32 - Trying to add column type'REAL' named 'Flow5' to table 'SensorData'...
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+near "SensorData": syntax error 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   in H2OpticaLogic.DBService.AddColumn(SQLiteConnection connection, String tableName, String columnName, String columnType) in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 96
+2025-05-11 22:01:32 - [EXCEPTION] - 2025-05-11 22:01:32: SQL logic error
+no such column: Timestamp 
+   in System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, SQLiteCommand command, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   in System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   in System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   in System.Data.SQLite.SQLiteDataReader.NextResult()
+   in System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   in System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   in H2OpticaLogic.DBService.GetLatestWaterData() in C:\Users\Matteo Grizzo\source\repos\mgrizzo\H2Optica\H2OpticaLogic\DBService.cs:riga 907
+2025-05-11 22:01:33 - Trying to get async json response...

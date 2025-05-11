@@ -1,17 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity.Migrations.Model;
 using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.Dynamic;
 using System.IO;
 using System.Security.Cryptography;
+using System.Security.Policy;
 
 namespace H2OpticaLogic
 {
     public class DBService
     {
         private readonly string _dbPath;
+        private const int MAX_SENSOR_ID = 5;
 
         //Costruttore
         public DBService(string dbPathFilePath)
@@ -20,7 +23,6 @@ namespace H2OpticaLogic
         }
 
         //Metodi
-
         private SQLiteConnection GetConnection()
         {
             return new SQLiteConnection($"Data Source={_dbPath};Version=3;");
@@ -129,7 +131,7 @@ namespace H2OpticaLogic
                 Logger.Log(ex);
             }
 
-            if (resultID.Equals(null))
+            if (resultID == null)
                 return (int)-1;
 
             else return (int)resultID;
@@ -156,14 +158,16 @@ namespace H2OpticaLogic
                 //Query che crea la tabella dei dati
                 string dataQuery = @"CREATE TABLE IF NOT EXISTS SensorData (
                                         Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                        SensorID INTEGER NOT NULL,
-                                        DateTime DATETIME NOT NULL,
-                                        Volume REAL,
-                                        Temp REAL,
-                                        pH REAL,
-                                   
-                                        FOREIGN KEY (SensorID) REFERENCES Sensori(SensorID)
-                                    );";
+                                        Timestamp DATETIME NOT NULL,
+                                        Temp REAL NOT NULL,
+                                        pH REAL NOT NULL,
+                                        Flow0 REAL,
+                                        Flow1 REAL,
+                                        Flow2 REAL,                                   
+                                        Flow3 REAL,
+                                        Flow4 REAL,
+                                        Flow5 REAL
+                                       );";
 
                 try
                 {
@@ -189,15 +193,15 @@ namespace H2OpticaLogic
         {
             Logger.Log("Checking database integrity...");
 
+            if (!File.Exists(_dbPath))
+            {
+                Logger.Log("Database file doesn't exist or not found");
+                return -1;
+            }
+
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
-
-                if (!File.Exists(_dbPath))
-                {
-                    Logger.Log("Database file doesn't exist or not found");
-                    return -1;
-                }
 
                 //Controllo 'Sensori'
                 string checkedTable = "Sensori";
@@ -209,8 +213,18 @@ namespace H2OpticaLogic
                     Logger.Log($"Table '{checkedTable}' found");
 
                     //Controllo campi di 'Sensori'
-                    string[] columns = { "SensorID", "Name", "SensorLimit" };
-                    string[] types = { "INTEGER PRIMARY KEY", "TEXT NOT NULL UNIQUE", "REAL" };
+                    string[] columns =
+                    {
+                        "SensorID",
+                        "Name",
+                        "SensorLimit"
+                    };
+                    string[] types = 
+                    {
+                        "INTEGER PRIMARY KEY",
+                        "TEXT NOT NULL UNIQUE",
+                        "REAL"
+                    };
 
                     for (int i = 0; i < columns.Length; i++)
                     {
@@ -235,8 +249,32 @@ namespace H2OpticaLogic
                     Logger.Log($"Table '{checkedTable}' found");
 
                     //Controllo campi di 'SensorData'
-                    string[] columns = { "Id", "SensorID", "DateTime", "Volume", "Temp", "pH" };
-                    string[] types = { "INTEGER PRIMARY KEY AUTOINCREMENT", "INTEGER NOT NULL", "DATETIME NOT NULL", "REAL", "REAL", "REAL" };
+                    string[] columns = 
+                    {
+                        "Id",
+                        "Timestamp",
+                        "Temp",
+                        "pH",
+                        "Flow0",
+                        "Flow1",
+                        "Flow2",
+                        "Flow3",
+                        "Flow4",
+                        "Flow5"
+                    };
+                    string[] types = 
+                    { 
+                        "INTEGER PRIMARY KEY AUTOINCREMENT",
+                        "DATETIME NOT NULL",
+                        "REAL NOT NULL",
+                        "REAL NOT NULL",
+                        "REAL",
+                        "REAL",
+                        "REAL",
+                        "REAL",
+                        "REAL",
+                        "REAL"
+                    };
 
                     for (int i = 0; i < columns.Length; i++)
                     {
@@ -280,6 +318,13 @@ namespace H2OpticaLogic
 
         public int SetSensorLimit(int sensId, double? limit)
         {
+            if(sensId < 0 || sensId > MAX_SENSOR_ID)
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(sensId), $"Sensor ID: {sensId} does not exist"));
+                Logger.Log("Exiting method with code -1...");
+                return -1;
+            }
+
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
@@ -292,7 +337,11 @@ namespace H2OpticaLogic
 
                     using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
                     {
-                        cmd.Parameters.AddWithValue("@limit", limit);
+                        if(limit == null)
+                            cmd.Parameters.AddWithValue("@limit", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@limit", limit);
+
                         cmd.Parameters.AddWithValue("@sensId", sensId);
 
                         cmd.ExecuteNonQuery();
@@ -311,17 +360,24 @@ namespace H2OpticaLogic
         }
         public void RemoveFlowSens(int id)
         {
+            if(id < 0 || id > MAX_SENSOR_ID)
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(id), $"Sensor ID: {id} does not exist"));
+                Logger.Log("Exiting method...");
+                return;
+            }
+
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
-                string delData = @"DELETE FROM SensorData WHERE SensorID = @id";
+                string colName = $"Flow{id}";
+
+                string delData = $"UPDATE SensorData SET {colName} = NULL WHERE {colName} IS NOT NULL";
                 string delSens = @"DELETE FROM Sensori WHERE SensorID = @id";
 
                 using (SQLiteCommand clearData = new SQLiteCommand(delData, connection))
                 {
-                    clearData.Parameters.AddWithValue("@id", id);
-
                     clearData.ExecuteNonQuery();
                 }
 
@@ -340,7 +396,6 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                //Da fare con una transaction???
                 string nameQuery = @"UPDATE Sensori
                                      SET Name = @newName
                                      WHERE SensorID = @id;";
@@ -355,24 +410,89 @@ namespace H2OpticaLogic
             }
         }
 
-        public void InsertFlowData(int sensorID, double flow)
+        /*public void InsertFlowData(int sensorID, double flow)
         {
             using(SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
                 string sensorDataQuery = @"INSERT INTO SensorData 
-                                           (SensorID, DateTime, Volume)
+                                           (SensorID, Volume)
                                            VALUES
-                                           (@sensorID, @datetime, @flow);";
+                                           (@sensorID, @flow);";
 
                 using (SQLiteCommand insertData = new SQLiteCommand(sensorDataQuery, connection))
                 {
                     insertData.Parameters.AddWithValue("@sensorID", sensorID);
-                    insertData.Parameters.AddWithValue("@datetime", DateTime.Now);
                     insertData.Parameters.AddWithValue("@flow", flow);
 
                     insertData.ExecuteNonQuery();
+                }
+            }
+        }*/
+        public void InsertWaterData(double temp, double ph)
+        {
+            try
+            {
+                using (SQLiteConnection connection = GetConnection())
+                {
+                    connection.Open();
+
+                    string query = @"INSERT INTO SensorData
+                                     (Timestamp, Temp, pH)
+                                     VALUES
+                                     (@dt, @temp, @ph);";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@dt", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@temp", temp);
+                        cmd.Parameters.AddWithValue("@ph", ph);
+
+                        cmd.ExecuteNonQuery();
+
+                        Logger.Log("Successfully added 'Temp' and 'pH' data in table 'SensorData'");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                Logger.Log(ex);
+            }
+        }
+        public void InsertAllData(DataCollection data)
+        {
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+
+                try
+                {
+                    string query = @"INSERT INTO SensorData
+                                     (Timestamp, Temp, pH, Flow0, Flow1, Flow2, Flow3, Flow4, Flow5)
+                                     VALUES
+                                     (@time, @temp, @ph, @f0, @f1, @f2, @f3, @f4, @f5)";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@time", DateTime.Now);
+                        cmd.Parameters.AddWithValue("@temp", data.Stats.Temp);
+                        cmd.Parameters.AddWithValue("@ph", data.Stats.pH);
+
+                        for (int i = 0; i <= MAX_SENSOR_ID; i++)
+                        {
+                            if (data.Flows.Flux.TryGetValue(i, out double flow))
+                                cmd.Parameters.AddWithValue($"@f{i}", flow);
+                            else
+                                cmd.Parameters.AddWithValue($"@f{i}", DBNull.Value);
+                        }
+
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
                 }
             }
         }
@@ -382,7 +502,7 @@ namespace H2OpticaLogic
         {
             string name = null;
 
-            if (sensorID >= 0)
+            if (sensorID >= 0 && sensorID < 6)
             {
                 using (SQLiteConnection connection = GetConnection())
                 {
@@ -401,6 +521,12 @@ namespace H2OpticaLogic
                         }
                     }
                 }
+            }
+            else
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(sensorID), $"Sensor ID: {sensorID} does not exist"));
+                Logger.Log("Returning null...");
+                return null;
             }
 
             return name;
@@ -429,6 +555,46 @@ namespace H2OpticaLogic
             return sensorID;
         }
 
+        public double? GetSensorLimit(int sensorID)
+        {
+
+            if (sensorID < 0 || sensorID > MAX_SENSOR_ID)
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(sensorID), $"Sensor ID: {sensorID} does not exist"));
+                Logger.Log("Returning null...");
+                return null;
+            }
+
+            double? sensorLimit = null;
+
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+
+                try
+                {
+                    string query = @"SELECT SensorLimit FROM Sensori WHERE SensorID = @sensorID";
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    {
+                        using(SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            if(reader.Read())
+                            {
+                                sensorLimit = reader.IsDBNull(0) ? null : (double?)reader.GetDouble(0);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
+                }
+            }
+
+            return sensorLimit;
+        }
+
         public double? GetTemp(DateTime dateTime)
         {
             double? temp = null;
@@ -437,7 +603,7 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                string selectQuery = @"SELECT Temp FROM SensorData WHERE DateTime = @dateTime";
+                string selectQuery = @"SELECT Temp FROM SensorData WHERE Timestamp = @dateTime";
 
                 using(SQLiteCommand cmd  = new SQLiteCommand(selectQuery, connection))
                 {
@@ -464,7 +630,7 @@ namespace H2OpticaLogic
 
                 string selectQuery = @"SELECT Temp FROM SensorData
                                        WHERE Temp IS NOT NULL
-                                       ORDER BY DateTime DESC
+                                       ORDER BY Timestamp DESC
                                        LIMIT 1";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(selectQuery, connection))
@@ -488,7 +654,7 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                string selectQuery = @"SELECT pH FROM SensorData WHERE DateTime = @dateTime";
+                string selectQuery = @"SELECT pH FROM SensorData WHERE Timestamp = @dateTime";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(selectQuery, connection))
                 {
@@ -515,7 +681,7 @@ namespace H2OpticaLogic
 
                 string selectQuery = @"SELECT pH FROM SensorData
                                        WHERE pH IS NOT NULL
-                                       ORDER BY DateTime DESC
+                                       ORDER BY Timestamp DESC
                                        LIMIT 1";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(selectQuery, connection))
@@ -530,18 +696,29 @@ namespace H2OpticaLogic
 
             return pH;
         }
-        public double? GetVolume(DateTime dateTime)
+        public double? GetVolume(int sensId, DateTime time)
         {
+            if (sensId < 0 || sensId > MAX_SENSOR_ID)
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(sensId), $"Sensor ID: {sensId} does not exist"));
+                Logger.Log("Returning null...");
+                return null;
+            }
+
             double? volume = null;
 
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
-                string volumeQuery = @"SELECT Volume FROM SensorData WHERE DateTime = @dateTime";
+                string colName = $"Flow{sensId}";
+
+                string volumeQuery = $@"SELECT {colName} FROM SensorData WHERE {colName} IS NOT NULL AND Timestamp = @time";
 
                 using(SQLiteCommand cmd = new SQLiteCommand(volumeQuery, connection))
                 {
+                    cmd.Parameters.AddWithValue("@time", time);
+
                     using (SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
@@ -553,24 +730,31 @@ namespace H2OpticaLogic
             return volume;
         }
 
-        public double GetLatestVolume(int sensId)
+        public double? GetLatestVolume(int sensId)
         {
+            if(sensId < 0 || sensId > MAX_SENSOR_ID)
+            {
+                Logger.Log(new ArgumentOutOfRangeException(nameof(sensId), $"Sensor ID: {sensId} does not exist"));
+                Logger.Log("Returning null...");
+                return null;
+            }
+
             using (SQLiteConnection connection = GetConnection())
             {
                 connection.Open();
 
-                string query = @"SELECT Volume FROM SensorData WHERE SensorID = @sensId AND Volume IS NOT NULL
-                                 ORDER BY DateTime DESC LIMIT 1";
+                string colName = $"Flow{sensId}";
+
+                string query = $@"SELECT {colName} FROM SensorData WHERE {colName} IS NOT NULL
+                                 ORDER BY Timestamp DESC LIMIT 1";
 
                 using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
                 {
-                    cmd.Parameters.AddWithValue("@sensId", sensId);
-
                     using(SQLiteDataReader reader = cmd.ExecuteReader())
                     {
                         if(reader.Read())
                         {
-                            double volume = reader.GetDouble(0);
+                            double? volume = reader.IsDBNull(0) ? null : (double?)reader.GetDouble(0);
 
                             return volume;
                         }
@@ -579,6 +763,55 @@ namespace H2OpticaLogic
             }
 
             return double.NaN;
+        }
+
+        public Dictionary<DateTime, double> GetChartData(int sensId, DateTime day)
+        {
+            if (sensId < 0 || sensId > MAX_SENSOR_ID)
+                return null;
+
+            Dictionary<DateTime, double> dataSet = new Dictionary<DateTime, double>();
+
+            using (SQLiteConnection connection = GetConnection())
+            {
+                connection.Open();
+
+                string colName = $"Flow{sensId}";
+
+                DateTime dayStart = day.Date;
+                DateTime dayEnd = day.Date.AddDays(1).AddSeconds(-1); //23:59:59
+
+                string query = $@"SELECT Timestamp, {colName} FROM SensorData 
+                                  WHERE {colName} IS NOT NULL
+                                  AND Timestamp BETWEEN @dayStart AND @dayEnd
+                                  ORDER BY Timestamp ASC";
+
+                try
+                {
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@dayStart", dayStart);
+                        cmd.Parameters.AddWithValue("@dayEnd", dayEnd);
+
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                DateTime timestamp = reader.GetDateTime(0);
+                                double flowValue = reader.GetDouble(1);
+
+                                dataSet[timestamp] = flowValue;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
+                }
+            }
+
+            return dataSet;
         }
         public List<Sensor> GetSensorList()
         {
@@ -609,7 +842,7 @@ namespace H2OpticaLogic
             return sensList;
         }
 
-        public DataCollection GetLatestSensorData(int sensID)
+        /*public DataCollection GetLatestSensorData(int sensID)
         {
             DataCollection collection = new DataCollection();
 
@@ -622,37 +855,39 @@ namespace H2OpticaLogic
                                      WHERE SensorID = @sensID
                                      ORDER BY DateTime DESC
                                      LIMIT 1";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(dataQuery, connection))
+                try
                 {
-                    cmd.Parameters.AddWithValue("@sensID", sensID);
-
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    using (SQLiteCommand cmd = new SQLiteCommand(dataQuery, connection))
                     {
-                        if(reader.Read())
+                        cmd.Parameters.AddWithValue("@sensID", sensID);
+
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
                         {
-                            collection.timestamp = reader.GetDateTime(0);
+                            if (reader.Read())
+                            {
+                                double? volume = reader.IsDBNull(1) ? (double?)null : reader.GetDouble(1);
 
-                            double? volume = reader.IsDBNull(1) ? (double?)null : reader.GetDouble(1);
 
+                                if (!volume == null)
+                                    collection.Flows.Flux.Add(sensID, (double)volume); ;
 
-                            if (!volume.Equals(null))
-                                collection.Flux.Add(sensID, (double)volume);
-                            else
-                                collection.Flux.Add(sensID, double.NaN);
+                                collection.Stats.Temp = reader.IsDBNull(2) ? (double?)null : reader.GetDouble(2);
+                                collection.Stats.pH = reader.IsDBNull(3) ? (double?)null : reader.GetDouble(3);
 
-                                collection.Temp = reader.IsDBNull(2) ? (double?)null : reader.GetDouble(2);
-                            collection.pH = reader.IsDBNull(3) ? (double?)null : reader.GetDouble(3);
-
-                            return collection;
+                                return collection;
+                            }
                         }
                     }
+                }
+                catch (Exception ex)
+                {
+                    Logger.Log(ex);
                 }
             }
 
             return null;
-        }
-        public DataCollection GetLatestSensorData()
+        } */
+        public DataCollection GetLatestWaterData()
         {
             DataCollection collection = new DataCollection();
 
@@ -660,59 +895,39 @@ namespace H2OpticaLogic
             {
                 connection.Open();
 
-                string dataQuery = @"SELECT DateTime, Temp, pH
+                string dataQuery = @"SELECT Temp, pH
                                      FROM SensorData
-                                     ORDER BY DateTime DESC
+                                     ORDER BY Timestamp DESC
                                      LIMIT 1";
-
-                using (SQLiteCommand cmd = new SQLiteCommand(dataQuery, connection))
+                try
                 {
-                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+
+                    using (SQLiteCommand cmd = new SQLiteCommand(dataQuery, connection))
                     {
-                        if (reader.Read())
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
                         {
-                            collection.timestamp = reader.GetDateTime(0);
-                            collection.Temp = reader.IsDBNull(1) ? (double?)null : reader.GetDouble(1);
-                            collection.pH = reader.IsDBNull(2) ? (double?)null : reader.GetDouble(2);
+                            if (reader.Read())
+                            {
+                                collection.Stats.Temp = reader.IsDBNull(0) ? (double?)null : reader.GetDouble(0);
+                                collection.Stats.pH = reader.IsDBNull(1) ? (double?)null : reader.GetDouble(1);
+                            }
                         }
                     }
+
+                    List<Sensor> sensList = GetSensorList() ?? new List<Sensor>();
+
+                    foreach (Sensor sens in sensList)
+                    {
+                        collection.Flows.Flux.Add(sens.SensorID, (double)GetLatestVolume(sens.SensorID));
+                    }
                 }
-
-                List<Sensor> sensList = GetSensorList() ?? new List<Sensor>();
-
-                foreach (Sensor sens in sensList)
+                catch (Exception ex)
                 {
-                    collection.Flux.Add(sens.SensorID, GetLatestVolume(sens.SensorID));
+                    Logger.Log(ex);
                 }
             }
 
             return collection;
-        }
-    }
-
-    public class Sensor
-    {
-        public int SensorID { get; set; }
-        public string SensorName { get; set; }
-        public double? SensorLimit { get; set; }
-
-        public override bool Equals(object obj)
-        {
-            if(obj is Sensor sens)
-            {
-                    return this.SensorID == sens.SensorID && this.SensorName == sens.SensorName && this.SensorLimit == sens.SensorLimit;
-            }
-
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            int hashSensorID = SensorID.GetHashCode();
-            int hashSensorName = SensorName?.GetHashCode() ?? 0;
-            int hashSensorLimit = SensorLimit?.GetHashCode() ?? 0;
-
-            return hashSensorID ^ hashSensorName ^ hashSensorLimit;
         }
     }
 }
